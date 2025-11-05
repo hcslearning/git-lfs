@@ -1,3 +1,42 @@
 = README
 
-Pruebas con GIT LFS.
+== GIT LFS
+
+== Activación
+
+[source,bash]
+----
+# 1. Primero activar LFS en el repo
+git lfs install
+
+# 2. Especificar qué archivos trackear
+git lfs track "*.pdf"
+
+# 3. AGREGAR EL .gitattributes
+git add .gitattributes
+
+# 4. Ahora sí agregar los PDFs
+git add *.pdf
+
+# 5. Commit
+git commit -m "Add PDFs with LFS"
+
+# 6. Push
+git push origin main
+----
+
+== Clonación
+
+Para clonar y no descargar automáticamente los archivos LFS:
+
+[source,bash]
+----
+GIT_LFS_SKIP_SMUDGE=1 git clone urlrepo
+----
+
+Y si simplemente quiero que se descarguen los archivos LFS, es el comando habitual:
+
+[source,bash]
+----
+git clone urlrepo
+----
