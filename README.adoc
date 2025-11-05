@@ -40,3 +40,14 @@ Y si simplemente quiero que se descarguen los archivos LFS, es el comando habitu
 ----
 git clone urlrepo
 ----
+
+== Descargar archivos
+
+Puedo usar el comodín (*) o indicar un archivo específico para descargar:
+
+[source,bash]
+----
+git lfs pull --include="*.pdf"
+
+git lfs pull --include="jakarta-messaging-spec-3.1.pdf"
+----
